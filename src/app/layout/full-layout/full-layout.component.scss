@@ -1,0 +1,11 @@
+.example-container {
+  .mat-drawer {
+    width: 20%;
+    border-right: 1px solid gray;
+    height: 100%;
+    overflow: hidden;
+  }
+  .mat-content {
+    width: 80%;
+  }
+}
