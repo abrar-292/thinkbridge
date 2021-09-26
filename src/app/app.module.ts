@@ -10,6 +10,7 @@ import {SharedModule} from "./shared/shared.module";
 import {ReactiveFormsModule} from "@angular/forms";
 import {MatSelectModule} from "@angular/material/select";
 import {MatSidenavModule} from "@angular/material/sidenav";
+import {MatIconModule} from "@angular/material/icon";
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import {MatSidenavModule} from "@angular/material/sidenav";
     HttpClientModule,
     MatSelectModule,
     MatSidenavModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

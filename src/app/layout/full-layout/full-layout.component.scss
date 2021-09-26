@@ -1,11 +1,56 @@
-.example-container {
-  .mat-drawer {
-    width: 20%;
-    border-right: 1px solid gray;
-    height: 100%;
-    overflow: hidden;
+.active {
+  background-color: #eaf3f6;
+  color: #006199;
+  display: block;
+  border-left: 6px solid #006199;
+  font-family: RobotoFontsMedium;
+}
+
+.list-items {
+  height: 60px;
+  display: flex !important;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.main-sidebar-list p:hover {
+  background-color: #f3f3f3;
+  cursor: pointer;
+}
+
+.main-sidebar-list p {
+  font-size: 22px;
+}
+
+.brand {
+  margin: 10px 0;
+
+  span {
+    font-weight: bold;
   }
-  .mat-content {
-    width: 80%;
-  }
+}
+
+.margin-l {
+  margin-left: 60px !important;
+}
+
+.h-custom {
+  height: calc(100% - 60px)
+}
+
+.inventory-icon {
+  margin-right: 10px;
+}
+
+.mat-drawer, .mat-drawer-content {
+  transition: all .3s cubic-bezier(.4, .5, .3, 1);
+  overflow: hidden;
+}
+
+::ng-deep .mat-drawer-inner-container {
+  overflow: hidden !important;
+}
+
+.main-content {
+  margin: 15px;
 }

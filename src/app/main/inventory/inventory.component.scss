@@ -1,0 +1,27 @@
+table {
+  width: 100%;
+
+  th, td {
+    text-align: center;
+  }
+}
+
+.main-sec {
+  margin: 15px;
+}
+
+.heading {
+  margin: 15px 0;
+}
+
+.example-button-row {
+  text-align: right;
+  margin: 10px 0;
+}
+
+.no-data {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 20px;
+  color: gray;
+}

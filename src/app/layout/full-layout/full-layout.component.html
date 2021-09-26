@@ -1,13 +1,23 @@
-<div class="container-fluid bg-white w-100 h-100">
+<div class="container-fluid full-layout h-100 w-100">
   <mat-drawer-container class="example-container row h-100" [hasBackdrop]="windowSize">
-    <mat-drawer #drawer class="col-auto pr-1 pl-0 overflow-hidden bg-white" [opened]="true"
+    <mat-drawer #drawer class="col-auto pr-1 pl-0 overflow-hidden bg-white mat-drawer" [opened]="!windowSize"
                 [ngStyle]="{'width' : sidebarSize}"
-                [mode]="windowSize ? 'over' : 'side'" [ngClass]="{'col-7' : windowSize}">
-      I'm a drawer
+                [mode]="windowSize ? 'over' : 'side'">
+      <div class="list-group">
+        <h1 class="brand"><span class="think">Think</span>Bridge</h1>
+        <a class="mb-1 main-sidebar-list active" (click)="change($event)"
+           *ngFor="let item of typesOfNames; let i = index" attr.aria-valuetext="{{item.name}}">
+          <p routerLink="/"
+             (click)="windowSize && currentUrl == 'campaigns' ? drawer.toggle() : ''"
+             class="text-capitalize mb-0 sidebar-selection d-flex roboto-regular list-items">
+            <mat-icon class="inventory-icon">shopping_basket</mat-icon>
+            {{!smallSide ? item.name : ''}}
+          </p>
+        </a>
+      </div>
     </mat-drawer>
-    <mat-drawer-content class="col-auto h-100 main-content">
-<!--      <i *ngIf="helper.isLanding" class="fa fa-bars bar-icon d-xl-none"-->
-<!--         (click)="drawer.toggle(); sideChange(drawer)"></i>-->
+    <mat-drawer-content class="col-auto h-100 main-content mat-drawer-content" [ngClass]="{'margin-l' : smallSide}">
+      <mat-icon class="cursor-pointer" (click)="!windowSize ? changeSidebar() : drawer.toggle()">menu</mat-icon>
       <router-outlet></router-outlet>
     </mat-drawer-content>
   </mat-drawer-container>

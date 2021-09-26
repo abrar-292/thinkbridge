@@ -1,0 +1,13 @@
+.add-btn {
+  margin-top: 20px !important;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .mat-form-field {
+    width: 50%;
+  }
+}
